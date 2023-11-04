@@ -6,15 +6,15 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:48:50 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/10/31 18:48:51 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:26:39 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int n)
+int	ft_isdigit(int n)
 {
-    if (n >= 0 && n <= 9)
-        return (1);
-    return (0);
+	if (n >= '0' && n <= '9')
+		return (1);
+	return (0);
 }
