@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 15:40:26 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/05 17:36:35 by kael-ala         ###   ########.fr       */
+/*   Created: 2023/11/05 14:01:01 by kael-ala          #+#    #+#             */
+/*   Updated: 2023/11/05 16:05:47 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
-	int		sl;
+	size_t			i;
+	unsigned char	*ss;
+	unsigned char	cc;
 
 	i = 0;
-	sl = ft_strlen((char *)s);
-	while (i <= sl)
+	ss = (unsigned char *)s;
+	cc = (unsigned char)c;
+	while (i < n)
 	{
-		if (*(s + sl) == (char)c)
-			return ((char *)(s + sl));
-		sl--;
+		if (*ss == cc)
+			return ((unsigned char *)ss);
+		ss++;
+		i++;
 	}
 	return (NULL);
 }
 
 // int	main(void)
 // {
-// 	printf("%s", ft_strrchr("hello world", 0) - 1);
-// 	// printf("%s", strrchr(, 0));
+// 	printf("%s\n", ft_memchr("hello world budd", 'e', 17));
+// 	printf("%s", memchr("hello world budd", 'e', 17));
 // }

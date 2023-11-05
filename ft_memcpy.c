@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:23:41 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/04 19:55:41 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:57:26 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	while (i < n)
 	{
 		((char *)dest)[i] = ((char *)src)[i];
 		i++; 
 	}
-	return ((void *)dest);
+	return (dest);
 }
