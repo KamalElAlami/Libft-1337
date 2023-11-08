@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 18:49:05 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/07 16:34:27 by kael-ala         ###   ########.fr       */
+/*   Created: 2023/11/08 17:46:11 by kael-ala          #+#    #+#             */
+/*   Updated: 2023/11/08 21:03:54 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	char	*constr;
+	int		sl;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (!s1 && !s2)
+		return (NULL);
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
+	sl = ft_strlen(s1) + ft_strlen(s2);
+	constr = malloc(sizeof(char) * (sl + 1));
+	if (!constr)
+		return (NULL);
+	ft_strlcpy(constr, s1, ft_strlen(s1) + 1);
+	ft_strlcpy(constr + ft_strlen(s1), s2, ft_strlen(s2) + 1);
+	return (constr);
 }
+
