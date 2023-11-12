@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 17:46:11 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/08 21:03:54 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:33:54 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcpy(constr + ft_strlen(s1), s2, ft_strlen(s2) + 1);
 	return (constr);
 }
-

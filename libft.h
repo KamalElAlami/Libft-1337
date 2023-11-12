@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:49:08 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/08 21:04:44 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/11 15:29:32 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <string.h>
 # include <ctype.h>
 # include <limits.h>
-
 
 int		ft_isascii(int c);
 int		ft_isalpha(int c);
@@ -46,5 +45,6 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	**ft_split(char const *s, char c);
 
 #endif

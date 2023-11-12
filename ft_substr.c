@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:55:37 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/08 21:21:24 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:24:37 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(subptr, s + start, len + 1);
 	return (subptr);
 }
-
-
-
-/*
-	str => "aasdsfdfdfdfdffdfdfdf" ;
-	start : 1
-	len : 10 => asdsfdfdfd
-
-*/
 // int main()
 // {
 // 	char	str[5] = "Hello";
