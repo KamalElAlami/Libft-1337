@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:19:10 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/12 16:09:45 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/15 00:51:39 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,10 @@ int	count_words(char const *s, char c)
 	while (s[i])
 	{
 		while (s[i] && (s[i] == c))
-		{
 			i++;
-		}
 		if (s[i])
 			count++;
-		while (s[i] && !(s[i] == c))
+		while (s[i] && (s[i] != c))
 			i++;
 	}
 	return (count);
@@ -43,6 +41,8 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	k = 0;
+	if (!s || count_words(s, c) == 0)
+		return (NULL);
 	strs = malloc(sizeof(char **) * (count_words(s, c) + 1));
 	if (!strs)
 		return (NULL);
@@ -53,7 +53,8 @@ char	**ft_split(char const *s, char c)
 		j = i;
 		while (s[i] && !(s[i] == c))
 			i++;
-		strs[k++] = ft_substr(s, j, i - j);
+		if (i > j)
+			strs[k++] = ft_substr(s, j, i - j);
 	}
 	strs[k] = NULL;
 	return (strs);
@@ -61,11 +62,8 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	char	**dd;
-// 	int		i;
-// 	i = 0;
-// 	dd = ft_split("lorem ipsum dolor sit amet, 
-// consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+// 	char **dd = ft_split("       split    this   for   me  !       ", ' ');
+// 	int i = 0;
 // 	while (dd[i])
 // 		printf("%s\n", dd[i++]);
 // }

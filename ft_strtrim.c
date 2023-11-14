@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:05:03 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/12 16:33:19 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/12 23:08:22 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str, &s1[start], end - start + 2);
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	printf("%s", ft_strtrim("kamual", "u"));
-// }
