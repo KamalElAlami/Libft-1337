@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 21:30:17 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/17 04:12:39 by kael-ala         ###   ########.fr       */
+/*   Created: 2023/11/19 10:43:48 by kael-ala          #+#    #+#             */
+/*   Updated: 2023/11/19 22:40:28 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	void	*alptr;
+	t_list	*ptr;
 
-	alptr = malloc(count * size);
-	if (!alptr)
+	ptr = malloc(sizeof(t_list));
+	if (!ptr)
 		return (NULL);
-	else
-		ft_bzero(alptr, count * size);
-	return (alptr);
+	ptr->content = content;
+	ptr->next = NULL;
+	return (ptr);
 }
-
-// int	main(void)
+// int main(void)
 // {
-// 	int	*ptr;
+// 	char *name;
+// 	t_list *pt;
+// 	t_list p;
 
-// 	ptr = ft_calloc(0, 0);
-// 	for (int i=0; i < 5; i++)
-// 	{
-// 		printf("%d\n", ptr[i]);	
-// 	}
+// 	name = ft_strdup("kamal");
+// 	pt = ft_lstnew(name);
+// 	printf("%s", pt->content);
 // }

@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:01:01 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/05 16:05:47 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:45:19 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (*ss == cc)
-			return ((unsigned char *)ss);
+			return (ss);
 		ss++;
 		i++;
 	}
@@ -33,6 +33,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 // int	main(void)
 // {
-// 	printf("%s\n", ft_memchr("hello world budd", 'e', 17));
+// 	// char *d = "kamal";
+// 	// char *s = ft_memchr(d, 'a', 5);
+// 	// printf("%ld", s - d);
 // 	printf("%s", memchr("hello world budd", 'e', 17));
 // }

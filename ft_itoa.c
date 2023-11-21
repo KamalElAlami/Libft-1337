@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 04:03:26 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/15 00:11:57 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:30:31 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,3 +84,10 @@ char	*ft_itoa(int n)
 	set_char(buffer, n, extra);
 	return (buffer);
 }
+// int main() {
+//     printf("%s", ft_itoa(1111));
+//     // printf("%s\n", ft_itoa(-11));
+//     // printf("%s\n", ft_itoa(3211));
+//     // printf("%s\n", ft_itoa(0));
+//     // printf("%s\n", ft_itoa(-13221));
+// }

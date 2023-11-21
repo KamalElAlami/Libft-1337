@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:19:47 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/07 15:53:13 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/17 04:09:30 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int	ft_atoi(const char *str)
 	}
 	return (number * sign);
 }
+
 // int main(void)
 // {
 //     printf("%d\n", ft_atoi("1234567890123456789"));

@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 21:53:30 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/04 16:21:04 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:29:40 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dstl + i] = '\0';
 	return (dstl + srcl);
 }
-
 // int main()
 // {
 // 	char dest[15];

@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:19:10 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/16 18:27:13 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/20 14:10:39 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int	count_words(char const *s, char c)
 
 	count = 0;
 	i = 0;
-	if (!s[i])
-		return (0);
 	while (s[i])
 	{
 		while (s[i] && (s[i] == c))
@@ -43,7 +41,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	k = 0;
-	if (!s || count_words(s, c) == 0)
+	if (!s)
 		return (NULL);
 	strs = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!strs)
@@ -62,13 +60,7 @@ char	**ft_split(char const *s, char c)
 	return (strs);
 }
 
-// int	main(void)
-// {
-// 	char **dd = ft_split(" hello world helo kamal ", '	');
-// 	int i = 0;
-// 	if (dd[i])
-// 	{
-// 		while (dd[i])
-// 			printf("%s\n", dd[i++]);	
-// 	}
+// int main() {
+// 	char **ans = ft_split("\0sdsdsd\0", '\0');
+// 	printf("%s\n", ans[0]);	
 // }

@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:48:19 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/14 18:01:52 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:28:44 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,15 @@ void	*ft_memset(void *s, int c, size_t len)
 		d[i++] = (unsigned char)c;
 	return (d);
 }
+
 // int main()
 // {
-// 	char str[6];
-// 	printf("%s", ft_memset(str, , 1));
 
+// 	int i = 0;
+// 	int tab[] = {10,11};
+// 	int j = 0;
+// 	ft_memset(tab + 1, 5, 2);
+// 	ft_memset(tab + 1, 57, 1);
+
+// 	printf("%d\n", tab[1]);
 // }
