@@ -6,13 +6,13 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:19:47 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/17 04:09:30 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/26 13:52:43 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	_skipper(char *str, int *i, int sign)
+static int	_skipper(char *str, int *i, int sign)
 {
 	while (str[*i] == 32 || (str[*i] >= 9 && str[*i] <= 13))
 		(*i)++;
@@ -46,10 +46,3 @@ int	ft_atoi(const char *str)
 	}
 	return (number * sign);
 }
-
-// int main(void)
-// {
-//     printf("%d\n", ft_atoi("1234567890123456789"));
-//     printf("%d", atoi("1234567890123456789"));
-
-// }

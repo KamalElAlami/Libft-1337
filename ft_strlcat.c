@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 21:53:30 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/18 18:29:40 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:00:44 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
+	if (!dst && !size)
+		return (0);
 	dstl = ft_strlen(dst);
 	srcl = ft_strlen(src);
 	if (!size)
 		return (srcl);
-	if (size <= (size_t)ft_strlen(dst))
+	if (size <= ft_strlen(dst))
 		return (size + srcl);
 	while (i < size - dstl - 1 && src[i])
 	{
@@ -33,24 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dstl + i] = '\0';
 	return (dstl + srcl);
 }
-// int main()
-// {
-// 	char dest[15];
-
-// 	// dest[0] = '\0';
-//     // dest[11] = 'a';
-// 	// char destt[15];
-
-// 	// destt[0] = '\0';
-//     // destt[11] = 'a';
-// 	// int len = ft_strlcat(destt + 2, destt, 12);
-// 	// int lenn = strlcat(dest + 2, dest, 12);
-// 	dest[0] = '\0';
-// 	dest[11] = 'a';
-// 	int len = ft_strlcat(dest, "lorem ipsum", 15);
-// 	// int len = strlcat(dest, "lorem ipsum", 15);
-// 	write(1, "\n", 1);
-// 	write(1, dest, 15);
-// 	printf(" | %d", len);
-// 	// printf("%s | %d | %s | %d", destt, len, dest, lenn);
-// }

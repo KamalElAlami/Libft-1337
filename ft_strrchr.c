@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:40:26 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/05 17:36:35 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/23 18:07:51 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	printf("%s", ft_strrchr("hello world", 0) - 1);
-// 	// printf("%s", strrchr(, 0));
-// }

@@ -6,11 +6,10 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:48:19 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/18 18:28:44 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/25 17:48:30 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t len)
@@ -25,14 +24,11 @@ void	*ft_memset(void *s, int c, size_t len)
 	return (d);
 }
 
-// int main()
+// int main(void)
 // {
-
-// 	int i = 0;
-// 	int tab[] = {10,11};
-// 	int j = 0;
-// 	ft_memset(tab + 1, 5, 2);
-// 	ft_memset(tab + 1, 57, 1);
-
-// 	printf("%d\n", tab[1]);
+// 	int *buff;
+// 	buff = malloc(sizeof(int) * 4);
+// 	buff = ft_memset(buff, 160, 1);
+// 	buff = ft_memset(buff, 57, 2);
+// 	printf("%d", buff);
 // }

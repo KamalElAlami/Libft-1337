@@ -6,13 +6,24 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:19:10 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/20 14:10:39 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:04:04 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static char	**free2darray(char **strs)
+{
+	int	i;
+
+	i = 0;
+	while (strs[i])
+		free(strs[i++]);
+	free(strs);
+	return (NULL);
+}
+
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -31,21 +42,15 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**spl_stuck(char const *s, char c, char **strs)
 {
 	int		i;
 	int		j;
 	int		k;
-	char	**strs;
 
 	i = 0;
 	j = 0;
 	k = 0;
-	if (!s)
-		return (NULL);
-	strs = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!strs)
-		return (NULL);
 	while (s[i])
 	{
 		while (s[i] && (s[i] == c))
@@ -54,13 +59,26 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && !(s[i] == c))
 			i++;
 		if (i > j)
-			strs[k++] = ft_substr(s, j, i - j);
+		{
+			strs[k] = ft_substr(s, j, i - j);
+			if (!strs[k])
+				return (free2darray(strs));
+			k++;
+		}
 	}
 	strs[k] = NULL;
 	return (strs);
 }
 
-// int main() {
-// 	char **ans = ft_split("\0sdsdsd\0", '\0');
-// 	printf("%s\n", ans[0]);	
-// }
+char	**ft_split(char const *s, char c)
+{
+	char	**strs;
+
+	if (!s)
+		return (NULL);
+	strs = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!strs)
+		return (NULL);
+	strs = spl_stuck(s, c, strs);
+	return (strs);
+}

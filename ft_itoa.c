@@ -6,13 +6,13 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 04:03:26 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/18 18:30:31 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:03:30 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	int_count(int n)
+static int	int_count(int n)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	int_count(int n)
 	return (i);
 }
 
-void	rev_buffer(char *buffer, int size)
+static void	rev_buffer(char *buffer, int size)
 {
 	int		j;
 	int		k;
@@ -46,7 +46,7 @@ void	rev_buffer(char *buffer, int size)
 	buffer[size] = '\0';
 }
 
-void	set_char(char *buffer, int n, int extra)
+static void	set_char(char *buffer, int n, int extra)
 {
 	int	i;
 
@@ -84,10 +84,3 @@ char	*ft_itoa(int n)
 	set_char(buffer, n, extra);
 	return (buffer);
 }
-// int main() {
-//     printf("%s", ft_itoa(1111));
-//     // printf("%s\n", ft_itoa(-11));
-//     // printf("%s\n", ft_itoa(3211));
-//     // printf("%s\n", ft_itoa(0));
-//     // printf("%s\n", ft_itoa(-13221));
-// }
