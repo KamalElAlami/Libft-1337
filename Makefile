@@ -6,7 +6,7 @@
 #    By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 18:14:53 by kael-ala          #+#    #+#              #
-#    Updated: 2023/11/25 20:28:03 by kael-ala         ###   ########.fr        #
+#    Updated: 2023/12/01 14:26:10 by kael-ala         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,4 +52,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY : clean bonus fclean re
+.PHONY : clean 

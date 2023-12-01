@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:05:03 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/12 23:08:22 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/27 23:49:18 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (ft_strchr(set, s1[start]) && start <= end)
 		start++;
 	if (start > end)
+	{
 		return (ft_strdup(s1 + end + 1));
+	}
 	while (ft_strchr(set, s1[end]) && end >= 0)
 		end--;
-	str = malloc(end - start + 2);
+	str = malloc(end - start + 1 + 1);
 	if (!str)
 		return (NULL);
 	ft_strlcpy(str, &s1[start], end - start + 2);

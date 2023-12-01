@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:19:10 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/26 14:04:04 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/27 13:06:07 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	strs = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	strs = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!strs)
 		return (NULL);
 	strs = spl_stuck(s, c, strs);

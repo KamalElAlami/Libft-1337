@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:48:19 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/25 17:48:30 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/11/30 18:23:58 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,16 @@ void	*ft_memset(void *s, int c, size_t len)
 	i = 0;
 	while (i < len)
 		d[i++] = (unsigned char)c;
-	return (d);
+	return ((void *)d);
 }
-
+// #include <stdio.h>
 // int main(void)
 // {
-// 	int *buff;
-// 	buff = malloc(sizeof(int) * 4);
-// 	buff = ft_memset(buff, 160, 1);
-// 	buff = ft_memset(buff, 57, 2);
-// 	printf("%d", buff);
+// 	int *b;
+// 	b = calloc(4, 1);
+// 	ft_memset(&b, 0, 4);
+// 	ft_memset(&b, 0, 3);
+// 	ft_memset(&b, 57, 1);
+// 	ft_memset(&b, 5, 2);
+// 	printf("%d", b);
 // }
