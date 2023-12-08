@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:34:10 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/28 23:24:38 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/12/04 18:17:54 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (destt > srcc)
 		while (n--)
 			destt[n] = srcc[n];
-	else 
+	else
 		ft_memcpy(destt, srcc, n);
 	return (destt);
 }

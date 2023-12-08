@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 21:30:17 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/28 23:28:01 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/12/06 20:22:37 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*alptr;
 
-	if ((count * size) > (size_t)UINT_MAX)
+	if (count && SIZE_MAX / count < size)
 		return (NULL);
 	alptr = malloc(count * size);
 	if (!alptr)
 		return (NULL);
-	else
-		ft_bzero(alptr, count * size);
+	ft_bzero(alptr, count * size);
 	return (alptr);
 }

@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:19:47 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/29 13:28:39 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/12/06 20:22:20 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_atoi(const char *str)
 		number = number * 10 + str[i] - '0';
 		if (number > LONG_MAX && sign == 1)
 			return (-1);
-		if (number > (unsigned long)LONG_MAX + 1 && sign == -1)
+		if (number > LONG_MAX && sign == -1)
 			return (0);
 		i++;
 	}

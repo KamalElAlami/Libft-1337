@@ -6,7 +6,7 @@
 /*   By: kael-ala <kael-ala@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 18:09:16 by kael-ala          #+#    #+#             */
-/*   Updated: 2023/11/23 18:05:43 by kael-ala         ###   ########.fr       */
+/*   Updated: 2023/12/04 18:17:48 by kael-ala         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (*ss1 == *ss2 && n - 1)
 	{
 		ss1++;
-		ss2++; 
+		ss2++;
 		n--;
 	}
 	return (*ss1 - *ss2);
