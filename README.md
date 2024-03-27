@@ -1,7 +1,7 @@
-# Libft - My 42 School Project Journey 📚
+# Libft - My 1337 School Project Journey 📚
 
 ## Description
-Libft was a pivotal project during my time at 42 School, providing an enriching experience that significantly deepened my understanding of C programming. This project challenged me to create a library containing various functions that mirror and extend the functionalities of the standard C library.
+Libft was a pivotal project during my time at 1337 FIL, providing an enriching experience that significantly deepened my understanding of C programming. This project challenged me to create a library containing various functions that mirror and extend the functionalities of the standard C library.
 
 ## My Learning Journey 🚀
 Throughout the development of Libft, I delved into several key areas:
